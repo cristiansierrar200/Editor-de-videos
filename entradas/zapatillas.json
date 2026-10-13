@@ -1,0 +1,68 @@
+{
+  "composicion": "VideoVertical",
+  "titulo": "Review zapatillas",
+  "duracionTitulo": 0,
+  "transicion": 0.15,
+  "clips": [
+    {
+      "src": "clips/01.mp4",
+      "tipo": "video",
+      "duracion": 5.2,
+      "inicio": 0
+    },
+    {
+      "src": "clips/02.mp4",
+      "tipo": "video",
+      "duracion": 4.44,
+      "inicio": 0
+    },
+    {
+      "src": "clips/03.mp4",
+      "tipo": "video",
+      "duracion": 5.19,
+      "inicio": 0,
+      "texto": "Opción 1"
+    },
+    {
+      "src": "clips/04.mp4",
+      "tipo": "video",
+      "duracion": 4.42,
+      "inicio": 0,
+      "texto": "Opción 1"
+    },
+    {
+      "src": "clips/05.mp4",
+      "tipo": "video",
+      "duracion": 4.67,
+      "inicio": 0,
+      "texto": "Opción 2"
+    },
+    {
+      "src": "clips/06.mp4",
+      "tipo": "video",
+      "duracion": 4.25,
+      "inicio": 0,
+      "texto": "Opción 2"
+    },
+    {
+      "src": "clips/07.mp4",
+      "tipo": "video",
+      "duracion": 4.15,
+      "inicio": 0,
+      "texto": "Opción 3"
+    },
+    {
+      "src": "clips/08.mp4",
+      "tipo": "video",
+      "duracion": 4.61,
+      "inicio": 0,
+      "texto": "Opción 3"
+    },
+    {
+      "src": "clips/09.mp4",
+      "tipo": "video",
+      "duracion": 12.33,
+      "inicio": 0
+    }
+  ]
+}
