@@ -1,5 +1,6 @@
 import { Composition } from "remotion";
 import { VideoAutomatico } from "./compositions/VideoAutomatico";
+import { DURACION_REVIEW, FPS_REVIEW, ReviewZapatillas } from "./review/ReviewZapatillas";
 import {
   FPS,
   calcularDuracion,
@@ -50,6 +51,15 @@ export const RemotionRoot: React.FC = () => {
         calculateMetadata={({ props }) => ({
           durationInFrames: calcularDuracion(props),
         })}
+      />
+      {/* Review de zapatillas (montaje a medida) */}
+      <Composition
+        id="ReviewZapatillas"
+        component={ReviewZapatillas}
+        fps={FPS_REVIEW}
+        width={1080}
+        height={1920}
+        durationInFrames={DURACION_REVIEW}
       />
     </>
   );

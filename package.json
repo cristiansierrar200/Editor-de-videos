@@ -12,10 +12,12 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@remotion/bundler": "4.0.535",
     "@remotion/cli": "4.0.535",
+    "@remotion/fonts": "^4.0.535",
     "@remotion/media-utils": "4.0.535",
     "@remotion/renderer": "4.0.535",
-    "@remotion/bundler": "4.0.535",
+    "@remotion/transitions": "^4.0.535",
     "@remotion/zod-types": "4.0.535",
     "react": "19.2.0",
     "react-dom": "19.2.0",
