@@ -14,17 +14,25 @@ export const GRADO_PERSONA = "brightness(1.05) contrast(1.08) saturate(1.12)";
 
 export const Video: React.FC<{
   src: string;
+  desde?: number; // segundo del archivo original donde empieza el clip
   filtro?: string;
   zoom?: [number, number];
+  saltos?: [number, number][]; // zoom "punch-in": [segundo original, escala]
   volumen?: number;
-}> = ({ src, filtro = GRADO_PERSONA, zoom = [1, 1.04], volumen = 1 }) => {
+}> = ({ src, desde = 0, filtro = GRADO_PERSONA, zoom = [1, 1.04], saltos, volumen = 1 }) => {
   const frame = useCurrentFrame();
-  const { durationInFrames } = useVideoConfig();
-  const escala = interpolate(frame, [0, durationInFrames], zoom);
+  const { durationInFrames, fps } = useVideoConfig();
+  let escala = interpolate(frame, [0, durationInFrames], zoom);
+  if (saltos) {
+    const t = frame / fps + desde;
+    const actual = [...saltos].reverse().find(([s]) => t >= s);
+    escala *= actual ? actual[1] : 1;
+  }
   return (
     <AbsoluteFill style={{ overflow: "hidden" }}>
       <OffthreadVideo
         src={staticFile(src)}
+        trimBefore={Math.round(desde * fps)}
         volume={volumen}
         style={{
           width: "100%",
