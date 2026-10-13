@@ -1,0 +1,11 @@
+{
+  "composicion": "VideoAutomatico",
+  "titulo": "Vacaciones 2026",
+  "subtitulo": "Editado automáticamente",
+  "duracionTitulo": 3,
+  "transicion": 0.5,
+  "clips": [
+    { "src": "", "tipo": "imagen", "duracion": 3, "texto": "Pon tus clips en /public" },
+    { "src": "", "tipo": "imagen", "duracion": 3, "texto": "y cambia este JSON" }
+  ]
+}

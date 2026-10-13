@@ -1,0 +1,5 @@
+node_modules/
+salida/
+out/
+.DS_Store
+.env
